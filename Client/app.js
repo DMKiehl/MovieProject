@@ -1,5 +1,5 @@
 (function($){
-    $(document).ready(function{
+    $(document).ready(function(){
         $.get("'https://localhost:44325/api/movie", function(data, status){
             var movies = '';
             $.each(data, function(key, value){
@@ -68,4 +68,3 @@
 
     $('#update').submit( updateMovie );
 })(jQuery);
-
