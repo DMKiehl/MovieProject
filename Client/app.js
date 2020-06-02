@@ -29,7 +29,7 @@
 (function($){
     function updateMovie( e ){
         var dict = {
-            MovieId: this["movieId"].value,
+            MovieId: parseInt(this["movieId"].value),
         	Title : this["title"].value,
             Director: this["director"].value,
             Genre: this["genre"].value
