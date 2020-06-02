@@ -1,4 +1,19 @@
 (function($){
+    $(document).ready(function{
+        $.get("'https://localhost:44325/api/movie", function(data, status){
+            var movies = '';
+            $.each(data, function(key, value){
+                movies += '<tr>';
+                movies += '<td>' + value.title + '</td>';
+                movies += '<td>' + value.director + '</td>';
+                movies += '<td>' + value.genre + '</td>';
+                movies += '</tr>';
+            })
+            $('#movies').append(movies);
+    })
+})(jQuery);
+
+(function($){
     function processForm( e ){
         var dict = {
         	Title : this["title"].value,
@@ -25,7 +40,6 @@
 
     $('#my-form').submit( processForm );
 })(jQuery);
-
 (function($){
     function updateMovie( e ){
         var dict = {
