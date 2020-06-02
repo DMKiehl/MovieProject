@@ -23,7 +23,7 @@ namespace WebAPISample.Data
                            new Movie { MovieId = 4, Title = "Pineapple Express", Genre = "Comedy", Director = "David Gordon Green" },
                            new Movie { MovieId = 5, Title = "Die Hard", Genre = "Action", Director = "John McTiernan" }
                         );
-            // Seed data - needs migration
+           
 
         }
 
