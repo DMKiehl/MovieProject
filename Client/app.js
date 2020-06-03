@@ -92,5 +92,27 @@ function updateMovie( e ){
 
 $('#update').submit( updateMovie );
 
+function getById(){
+    var id = $('#movieId').val();
+    var movie = '';
+    $.ajax({
+        url: 'https://localhost:44325/api/movie/' + id,
+        dataType: 'json',
+        type: 'get',
+        contentType: 'application/json',
+        success: function( data, textStatus, jQxhr ){
+            movie = data;
+            console.log(movie);
+        },
+        error: function( jqXhr, textStatus, errorThrown ){
+            console.log( errorThrown );
+        }
+    });
+}
+
+function changeInput(){
+    
+}
+
 
    
