@@ -72,7 +72,7 @@ function updateMovie( e ){
 
     $.ajax({
         url: 'https://localhost:44325/api/movie',
-        dataType: 'json',
+        dataType: 'text',
         type: 'put',
         contentType: 'application/json',
         data: JSON.stringify(dict),
@@ -83,12 +83,9 @@ function updateMovie( e ){
         error: function( jqXhr, textStatus, errorThrown ){
             console.log( errorThrown );
         }
-    })
-    .then(function(){
-        createTable();
     });
-    
-
+       
+    createTable();
     document.getElementById('update').reset();
     e.preventDefault();
 }
