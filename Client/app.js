@@ -108,11 +108,16 @@ function getById(){
             console.log( errorThrown );
         }
     });
+    return movie;
 }
 
 function changeInput(){
-    
+    let selected = getById();
+    $('#update-title').val(selected.title);
+    $('#update-director').val(selected.director);
+    $('#update-genre').val(selected.genre);
 }
 
+$('#movieId').change(changeInput);
 
    
