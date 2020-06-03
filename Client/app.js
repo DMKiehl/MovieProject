@@ -84,4 +84,3 @@
 
     $('#update').submit( updateMovie );
 })(jQuery);
-
