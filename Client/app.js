@@ -1,7 +1,6 @@
 
-(function($){
     function createTable(){
-        
+        $('#movies').html('');
 
         $.ajax({
             url: 'https://localhost:44325/api/movie',
@@ -11,10 +10,8 @@
             success: function( data){
                 console.log(data);
                 $.each(data, function(index, value) {
-                    movies = data;
-                    var trHTML = '';
                     var row = $('<tr><td>' + value.title + '</td><td>' + value.director + '</td><td>' + value.genre + '<td></tr>')
-                    $('#movies').append(row);                 
+                    $('#movies').append(row);
                 })
                 
             },
@@ -27,9 +24,9 @@
     }
 
     $(document).ready(createTable);
-})(jQuery);
 
-(function($){
+
+
     function processForm( e ){
         var dict = {
         	Title : this["title"].value,
@@ -56,9 +53,9 @@
     }
 
     $('#my-form').submit( processForm );
-})(jQuery);
 
-(function($){
+
+
     function updateMovie( e ){
         var dict = {
             MovieId: parseInt(this["movieId"].value),
@@ -86,4 +83,3 @@
     }
 
     $('#update').submit( updateMovie );
-})(jQuery);
