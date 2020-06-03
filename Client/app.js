@@ -1,16 +1,22 @@
 (function($){
-    $(document).ready(function(){
-        $.get("'https://localhost:44325/api/movie", function(data, status){
-            var movies = '';
-            $.each(data, function(key, value){
-                movies += '<tr>';
-                movies += '<td>' + value.title + '</td>';
-                movies += '<td>' + value.director + '</td>';
-                movies += '<td>' + value.genre + '</td>';
-                movies += '</tr>';
-            })
-            $('#movies').append(movies);
-    })
+    function getAll(e){
+        $.ajax({
+            url: 'https://localhost:44325/api/movie',
+            dataType: 'json',
+            type: 'GET',
+            contentType: 'application/json',
+            success: function( data, textStatus, jQxhr){
+                console.log(data);
+            },
+            error: function( jqXhr, textStatus, errorThrown ){
+                console.log( errorThrown );
+            }
+
+        });
+       
+    }
+
+    $(document).ready( getAll );
 })(jQuery);
 
 (function($){
