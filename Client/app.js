@@ -42,13 +42,13 @@
             data: JSON.stringify(dict),
             success: function( data, textStatus, jQxhr ){
                 $('#response pre').html( data );
-                createTable();
+                
             },
             error: function( jqXhr, textStatus, errorThrown ){
                 console.log( errorThrown );
             }
         });
-
+        createTable();
         e.preventDefault();
     }
 
