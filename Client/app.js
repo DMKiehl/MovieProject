@@ -1,14 +1,13 @@
 
 (function($){
     function createTable(){
-        var movies = '';
+        
 
         $.ajax({
             url: 'https://localhost:44325/api/movie',
             dataType: 'json',
             type: 'get',
             contentType: 'application/json',
-            // data: $('#moviesDetails').serialize(),
             success: function( data){
                 console.log(data);
                 $.each(data, function(index, value) {
@@ -46,6 +45,7 @@
             data: JSON.stringify(dict),
             success: function( data, textStatus, jQxhr ){
                 $('#response pre').html( data );
+                createTable();
             },
             error: function( jqXhr, textStatus, errorThrown ){
                 console.log( errorThrown );
@@ -75,6 +75,7 @@
             data: JSON.stringify(dict),
             success: function( data, textStatus, jQxhr ){
                 $('#response pre').html( data );
+                createTable();
             },
             error: function( jqXhr, textStatus, errorThrown ){
                 console.log( errorThrown );
