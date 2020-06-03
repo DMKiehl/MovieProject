@@ -1,5 +1,5 @@
 function createTable(){
-    $('#movies').html("");
+    $('#movies').empty();
 
     $.ajax({
         url: 'https://localhost:44325/api/movie',
