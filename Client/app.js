@@ -51,10 +51,10 @@ function processForm( e ){
         }
        
     });
-    
+    createTable();
     document.getElementById('my-form').reset();
     e.preventDefault();
-    createTable();
+    
 }
 
 $('#my-form').submit( processForm );
