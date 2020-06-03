@@ -103,9 +103,15 @@ function getById(){
         success: function( data, textStatus, jQxhr ){
             movie = data;
             console.log(movie);
-           
         },
-    })
+        error: function( jqXhr, textStatus, errorThrown ){
+            console.log( errorThrown );
+        }
+    });
+}
+
+function changeInput(){
+    
 }
 
 
