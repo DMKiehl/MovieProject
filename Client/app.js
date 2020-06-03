@@ -7,8 +7,9 @@
             dataType: 'json',
             type: 'get',
             contentType: 'application/json',
-            data: $('#moviesDetails').serialize(),
+            // data: $('#moviesDetails').serialize(),
             success: function( data){
+                console.log(data);
                 $.each(data, function(index, value) {
                     var row = $('<tr><td>' + value.title + '</td><td>' + value.director + '</td><td>' + value.genre + '<td></tr>')
                     $('#movies').append(row);
@@ -81,4 +82,3 @@
     }
 
     $('#update').submit( updateMovie );
-
