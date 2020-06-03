@@ -7,11 +7,11 @@ h1, h3 {
     text-align: center;
 }
 
-.newMovie {
-    float: right;
+h5 {
+    font-size: 16px;
 }
 
-.display {
-    float: left;
+.container {
+    padding-top: 20px;
 }
 
