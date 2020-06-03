@@ -30,7 +30,7 @@ $(document).ready(createTable);
 
 
 function processForm( e ){
-    var dict = {
+    var data = {
         Title : this["title"].value,
         Director: this["director"].value,
         Genre: this["genre"].value
@@ -38,10 +38,10 @@ function processForm( e ){
 
     $.ajax({
         url: 'https://localhost:44325/api/movie',
-        dataType: 'json',
+        dataType: 'text',
         type: 'post',
         contentType: 'application/json',
-        data: JSON.stringify(dict),
+        data: JSON.stringify(data),
         success: function( data, textStatus, jQxhr ){
             $('#response pre').html( data );
             
@@ -50,11 +50,12 @@ function processForm( e ){
             console.log( errorThrown );
         }
        
+    }).then(function(){
+        createTable();
     });
-    createTable();
+
     document.getElementById('my-form').reset();
     e.preventDefault();
-    
 }
 
 $('#my-form').submit( processForm );
@@ -82,8 +83,12 @@ function updateMovie( e ){
         error: function( jqXhr, textStatus, errorThrown ){
             console.log( errorThrown );
         }
+    })
+    .then(function(){
+        createTable();
     });
-    createTable();
+    
+
     document.getElementById('update').reset();
     e.preventDefault();
 }
