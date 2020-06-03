@@ -25,7 +25,6 @@ function createTable(){
 $(document).ready(createTable);
 
 
-
 function processForm( e ){
     var dict = {
         Title : this["title"].value,
@@ -49,9 +48,10 @@ function processForm( e ){
        
     });
 
-    createTable();
     e.preventDefault();
+    createTable();
     document.getElementById('my-form').reset();
+       
     
 }
 
