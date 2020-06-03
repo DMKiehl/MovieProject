@@ -1,7 +1,17 @@
 table, th, tr, td {
     border: 1px solid black;
+ 
 }
 
 h1, h3 {
     text-align: center;
 }
+
+.newMovie {
+    float: right;
+}
+
+.display {
+    float: left;
+}
+
