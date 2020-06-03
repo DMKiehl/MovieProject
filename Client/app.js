@@ -1,16 +1,5 @@
 
-
 (function($){
-<<<<<<< HEAD
-    function getAll(e){
-        $.ajax({
-            url: 'https://localhost:44325/api/movie',
-            dataType: 'json',
-            type: 'GET',
-            contentType: 'application/json',
-            success: function( data, textStatus, jQxhr){
-                console.log(data);
-=======
     function createTable(){
         var movies = '';
 
@@ -19,33 +8,26 @@
             dataType: 'json',
             type: 'get',
             contentType: 'application/json',
-            data: $('#moviesDetails').serialize(),
+            // data: $('#moviesDetails').serialize(),
             success: function( data){
+                console.log(data);
                 $.each(data, function(index, value) {
-                    var row = $("<tr><td>" + value.Title + "</td><td>" + value.Director + "</td><td>" + value.Genre + "<td></tr>")
-                    $('#movies').append(row);
+                    movies = data;
+                    var trHTML = '';
+                    var row = $('<tr><td>' + value.title + '</td><td>' + value.director + '</td><td>' + value.genre + '<td></tr>')
+                    $('#movies').append(row);                 
                 })
                 
->>>>>>> 221cb449d14240f462f4140532e998553adc6b05
             },
             error: function( jqXhr, textStatus, errorThrown ){
                 console.log( errorThrown );
             }
-<<<<<<< HEAD
-
-        });
-       
-    }
-
-    $(document).ready( getAll );
-=======
         });
 
 
     }
 
     $(document).ready(createTable);
->>>>>>> 221cb449d14240f462f4140532e998553adc6b05
 })(jQuery);
 
 (function($){
