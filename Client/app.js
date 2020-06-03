@@ -1,4 +1,7 @@
+
+
 (function($){
+<<<<<<< HEAD
     function getAll(e){
         $.ajax({
             url: 'https://localhost:44325/api/movie',
@@ -7,16 +10,42 @@
             contentType: 'application/json',
             success: function( data, textStatus, jQxhr){
                 console.log(data);
+=======
+    function createTable(){
+        var movies = '';
+
+        $.ajax({
+            url: 'https://localhost:44325/api/movie',
+            dataType: 'json',
+            type: 'get',
+            contentType: 'application/json',
+            data: $('#moviesDetails').serialize(),
+            success: function( data){
+                $.each(data, function(index, value) {
+                    var row = $("<tr><td>" + value.Title + "</td><td>" + value.Director + "</td><td>" + value.Genre + "<td></tr>")
+                    $('#movies').append(row);
+                })
+                
+>>>>>>> 221cb449d14240f462f4140532e998553adc6b05
             },
             error: function( jqXhr, textStatus, errorThrown ){
                 console.log( errorThrown );
             }
+<<<<<<< HEAD
 
         });
        
     }
 
     $(document).ready( getAll );
+=======
+        });
+
+
+    }
+
+    $(document).ready(createTable);
+>>>>>>> 221cb449d14240f462f4140532e998553adc6b05
 })(jQuery);
 
 (function($){
@@ -46,6 +75,7 @@
 
     $('#my-form').submit( processForm );
 })(jQuery);
+
 (function($){
     function updateMovie( e ){
         var dict = {
