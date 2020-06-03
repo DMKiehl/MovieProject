@@ -1,5 +1,6 @@
 function createTable(){
     $('#movies').empty();
+    $('#movieId').empty();
 
     $.ajax({
         url: 'https://localhost:44325/api/movie',
@@ -11,7 +12,10 @@ function createTable(){
             $.each(data, function(index, value) {
                 var row = $('<tr><td>' + value.movieId + '</td><td>' + value.title + '</td><td>' + value.director + '</td><td>' + value.genre + '<td></tr>')
                 $('#movies').append(row);
+                var option = $('<option></option>').val(value.movieId).html(value.movieId);
+                $('#movieId').append(option);
             })
+            
             
         },
         error: function( jqXhr, textStatus, errorThrown ){
@@ -47,12 +51,10 @@ function processForm( e ){
         }
        
     });
-
+    
+    document.getElementById('my-form').reset();
     e.preventDefault();
     createTable();
-    document.getElementById('my-form').reset();
-       
-    
 }
 
 $('#my-form').submit( processForm );
