@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "075f09ec-84dd-4b68-865f-2cfa0ec62765",
+		"name": "Movie Library",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetMovie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44325/api/movie/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"movie",
+						""
+					]
+				},
+				"description": "Gets all movie objects in db"
+			},
+			"response": []
+		},
+		{
+			"name": "GetMovieById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44325/api/movie/5",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"movie",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostMovie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Gone With the Wind\",\n\t\"director\": \"Victor Fleming\",\n\t\"genre\": \"Drama\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44325/api/movie/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"movie",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutMovie",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"movieId\": 20,\n\t\"title\": \"Gone With the Wind\",\n\t\"director\": \"Victor Fleming\",\n\t\"genre\": \"Comedy\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44325/api/movie/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44325",
+					"path": [
+						"api",
+						"movie",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
