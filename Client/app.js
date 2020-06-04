@@ -94,7 +94,7 @@ $('#update').submit( updateMovie );
 
 function getById(){
     var id = $('#movieId').val();
-    var movie = '';
+    var movie;
     $.ajax({
         url: 'https://localhost:44325/api/movie/' + id,
         dataType: 'json',
@@ -103,21 +103,21 @@ function getById(){
         success: function( data, textStatus, jQxhr ){
             movie = data;
             console.log(movie);
+            changeInput(movie);           
         },
         error: function( jqXhr, textStatus, errorThrown ){
             console.log( errorThrown );
         }
     });
-    return movie;
 }
 
-function changeInput(){
-    let selected = getById();
+function changeInput(selected){
+    
     $('#update-title').val(selected.title);
     $('#update-director').val(selected.director);
     $('#update-genre').val(selected.genre);
 }
 
-$('#movieId').change(changeInput);
+$('#movieId').change(getById);
 
    
