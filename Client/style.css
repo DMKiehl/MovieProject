@@ -3,6 +3,14 @@ table, th, tr, td {
  
 }
 
+thead{
+    background-color: azure;
+}
+
+tbody{
+    background-color: aliceblue;
+}
+
 h1 {
     text-align: center;
     padding-bottom: 5px;
