@@ -10,20 +10,14 @@ table, th, tr, td {
 
 thead{
     background-color: rgb(199, 233, 233);
-    text-align: center;
-
-    
-    
+    text-align: center;  
 }
 
 tbody {
  
     background-color: rgb(199, 233, 233);
-    text-align: center;
-  
-    height: 600px;
-
-    
+    text-align: center; 
+    height: 600px;   
 }
 
 h1 {
