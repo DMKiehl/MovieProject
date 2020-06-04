@@ -11,6 +11,7 @@ table, th, tr, td {
 thead{
     background-color: rgb(199, 233, 233);
     text-align: center;
+
     
     
 }
@@ -21,6 +22,7 @@ tbody {
     text-align: center;
   
     height: 600px;
+
     
 }
 
