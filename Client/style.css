@@ -3,15 +3,35 @@ table, th, tr, td {
  
 }
 
-h1, h3 {
+h1 {
     text-align: center;
+    padding-bottom: 5px;
 }
 
 h5 {
     font-size: 16px;
+    padding-bottom: 10px;
 }
 
 .container {
     padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgb(45, 161, 161);
 }
 
+.body {
+    
+    background-color: teal;
+}
+
+.banner {
+    font-size: 24px;
+}
+
+td {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+}
