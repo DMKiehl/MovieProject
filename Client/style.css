@@ -2,19 +2,31 @@ header{
     text-align: center;
     background-color: black;
     color: whitesmoke;
+    
 }
 table, th, tr, td {
     border: 1px solid black;
 }
 
-thead{
+thead tr{
     background-color: rgb(199, 233, 233);
     text-align: center;
+
+    overflow: auto;
+    width: 100%;
 }
 
 tbody{
+ 
     background-color: rgb(199, 233, 233);
     text-align: center;
+    overflow-y: scroll;
+ 
+    width: 100%;
+}
+
+tr {
+    width: 100%;
 }
 
 h1 {
@@ -48,4 +60,5 @@ h5 {
 
 table {
     width: 100%;
+
 }
