@@ -1,6 +1,10 @@
+header{
+    text-align: center;
+    background-color: black;
+    color: whitesmoke;
+}
 table, th, tr, td {
     border: 1px solid black;
- 
 }
 
 thead{
