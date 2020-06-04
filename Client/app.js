@@ -8,7 +8,7 @@ function createTable(){
         type: 'get',
         contentType: 'application/json',
         success: function( data){
-            console.log(data);
+             
             $.each(data, function(index, value) {
                 var row = $('<tr><td>' + value.movieId + '</td><td>' + value.title + '</td><td>' + value.director + '</td><td>' + value.genre + '<td></tr>')
                 $('#movies').append(row);
@@ -16,7 +16,7 @@ function createTable(){
                 $('#movieId').append(option);
             })
             
-            
+            $("#movieId").prepend("<option value='' selected='selected'>Choose a Movie Id</option>");
         },
         error: function( jqXhr, textStatus, errorThrown ){
             console.log( errorThrown );
