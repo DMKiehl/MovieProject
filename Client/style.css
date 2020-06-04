@@ -4,11 +4,13 @@ table, th, tr, td {
 }
 
 thead{
-    background-color: azure;
+    background-color: rgb(199, 233, 233);
+    text-align: center;
 }
 
 tbody{
-    background-color: aliceblue;
+    background-color: rgb(199, 233, 233);
+    text-align: center;
 }
 
 h1 {
@@ -38,9 +40,7 @@ h5 {
     padding-bottom: 5px;
 }
 
-td, th {
-    text-align: center;
-}
+
 
 table {
     width: 100%;
